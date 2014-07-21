@@ -1,0 +1,32 @@
+h1 {
+color: #428bca;
+}
+
+button {
+  margin: 1em;
+}
+
+.cat-added {
+color: #428bca;
+cursor: pointer; 
+}
+
+h3 {
+font-style: italic;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    width: 100%;
+    padding-left: .25em;
+}
+
+thead {
+    color: white;
+    background-color: #428bca;
+}
+
+#column-three-style {
+    color: #428bca;
+}

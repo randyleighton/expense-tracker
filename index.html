@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Organizer</h1>
+
+      <div class="row">
+        <div id="column-one" class="col-md-4">
+          <h3>New Category</h3>
+          <form id="category">
+            <div class="form-group">    
+                <input type="text" name="categories" class = "form-control" id="categories">
+              <button type="submit" name="categories-btn" id="categories-btn" class="btn btn-primary">Add</button>
+             </div>
+          </form>
+        </div>
+        <div id="column-two" class="col-md-4">
+          <h3>Category: </h3>
+          <div id="categories-list">
+          </div>
+          <form id="purchase">
+            <div class="form-group">
+              <label>Purchase Description: </label>
+              <input type="text" name="add-desc" class = "form-control" id="add-desc">
+              <label>Quantity </label>
+              <input type="text" name="add-qty" class = "form-control" id="add-qty">
+              <label>Price $</label>
+              <input type="text" name="add-price" class ="form-control" id="add-the-price">
+              <button type="submit" name="add-purchase-btn" id="add-purchase-btn" class="btn btn-primary">Add Purchase</button>
+           </div>
+          </form>
+        </div>
+          
+        <div id="column-three" class="col-md-4">
+          <h3>Purchases: </h3>
+          <div>
+            <table id="purchases-tab" >
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+    </div>
+  </div>
+  </body>
+</html>
