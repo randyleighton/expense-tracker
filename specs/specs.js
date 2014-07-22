@@ -1,10 +1,3 @@
-
-describe("Purchases", function() {
-    it("creates a purchases instance object utilizing a prototype",  function() {
-        var newPurchases = Object.create(Purchases);
-    });
-});    
-    
 describe("Purchases", function() {
     describe("totalCost", function() {
         it("utilize a method that calculates total cost for an item purchase with quantity and price", function() {
@@ -15,15 +8,3 @@ describe("Purchases", function() {
         });
     });
 });
-
-describe("Categories", function() {
-    it("creates a categories instance object utilizing a prototype",  function() {
-        var newCategory = Object.create(Categories);
-    });
-});    
-
-
-
-
-
-
