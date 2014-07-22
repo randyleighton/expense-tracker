@@ -1,39 +1,34 @@
-
-
-$(document).ready(function(){
-    
-    var Purchases = {
-        totalCost: function() {
-            var calculatedCost = this.price * this.quantity;
-            return calculatedCost;
+var Purchases = {
+    totalCost: function() {
+        var calculatedCost = this.price * this.quantity;
+        return calculatedCost;
     }
-  };
-  var Categories = {
+};
+var Categories = {
     initialize: function(name) {
-      this.name = name;
-      this.purchases = [];
+        this.name = name;
+        this.purchases = [];
     }
-  };
+};
     
+$(document).ready(function(){
     $("form#category").submit(function(event){
         event.preventDefault();
         var inputtedCategory = $("#categories").val();
         var newCategory = Object.create(Categories);
         newCategory.initialize(inputtedCategory); //create object with the inputted name
-        console.log(newCategory);
         $("form#category").find("input#categories").val("").focus(); //clear the category form and refocus on it.
-        $("#column-two h3").append("<div class = 'cat-added'>" + newCategory.name + "</div>"); //display the category name in a list in col-2
+        $("#column-two h3").append("<div class = 'cat-added'>" + newCategory.name + "</div>"); 
+        $("#column-three h3").text("Purchases for: " + newCategory.name);
+        $("table#purchases-tab tbody").empty();
         
-        $(".cat-added").last().click(function() { //when they click on the category
-//            $("#column-three h3").text("Purchases for: " + newCategory.name);
-            $("#column-three h3").text(function() {
-                
-                "Purchases for: " + newCategory.name
-            });          
+        $(".cat-added").last().click(function() {
+            $("#column-three h3").text("Purchases for: " + newCategory.name);
             $("table#purchases-tab tbody").empty();
             newCategory.purchases.forEach(function(purchase) {
-            $("table#purchases-tab").append("<tr><td>" + purchase.description + "</td><td>" + purchase.quantity + "</td><td>" + 
-                                             purchase.price +"</td><td>" + purchase.totalCost() + "</td></tr>");
+            $("table#purchases-tab").append("<tr><td>" + purchase.description + "</td><td>" + purchase.quantity +
+                                            "</td><td>" + purchase.price +"</td><td>" + purchase.totalCost() + 
+                                            "</td></tr>");
             });
             
         });
