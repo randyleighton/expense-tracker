@@ -11,6 +11,10 @@ color: #428bca;
 cursor: pointer; 
 }
 
+.cat-added:hover {
+color: red;
+}
+
 h3 {
 font-style: italic;
 
